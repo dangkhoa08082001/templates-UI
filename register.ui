@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterWindow</class>
+ <widget class="QMainWindow" name="RegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">	background-color: rgb(31, 149, 239);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="passwordInput">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="forgotPasswordLink">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>&lt;a href=&quot;forgot_password&quot;&gt;Forgot Password&lt;/a&gt;
+</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>50</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Register</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="usernameInput">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>150</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>User name</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="registerButton">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>330</y>
+      <width>101</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">            QPushButton {
+                border: 2px solid #8f8f91;
+                border-radius: 15px; /* Nửa chiều rộng hoặc chiều cao của nút */
+                background-color: #dcdcdc;
+                min-width: 30px; /* Đảm bảo nút là hình vuông */
+                min-height: 30px; /* Đảm bảo nút là hình vuông */
+            }
+            QPushButton:hover {
+                background-color: #c6c6c6;
+            }
+            QPushButton:pressed {
+                background-color: #a9a9a9;
+            }</string>
+    </property>
+    <property name="text">
+     <string>Đăng Ký</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="emailInput">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>150</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="phoneInput">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>200</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Phone number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="reEnterPasswordInput">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>250</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Re-enter Password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="addressInput">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>250</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+                border: 2px solid gray;
+                border-radius: 10px;
+                padding: 0 8px;
+                background: white;
+                selection-background-color: darkgray;
+            }
+
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Address</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

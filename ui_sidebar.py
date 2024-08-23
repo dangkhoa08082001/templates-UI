@@ -11,12 +11,12 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1121, 648)
-        MainWindow.setStyleSheet("background-color: rgb(245, 250, 254);")
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_BaseWindow(object):
+    def setupUi(self, BaseWindow):
+        BaseWindow.setObjectName("BaseWindow")
+        BaseWindow.resize(1121, 648)
+        BaseWindow.setStyleSheet("background-color: rgb(245, 250, 254);")
+        self.centralwidget = QtWidgets.QWidget(BaseWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -254,21 +254,149 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName("stackedWidget")
         self.dashboard_page = QtWidgets.QWidget()
         self.dashboard_page.setObjectName("dashboard_page")
-        self.label_4 = QtWidgets.QLabel(self.dashboard_page)
-        self.label_4.setGeometry(QtCore.QRect(310, 220, 231, 81))
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        self.label_4.setFont(font)
+        self.groupBox_2 = QtWidgets.QGroupBox(self.dashboard_page)
+        self.groupBox_2.setGeometry(QtCore.QRect(0, 0, 891, 571))
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.label_4 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_4.setGeometry(QtCore.QRect(460, 30, 47, 13))
         self.label_4.setObjectName("label_4")
+        self.titleLineEdit = QtWidgets.QLineEdit(self.groupBox_2)
+        self.titleLineEdit.setGeometry(QtCore.QRect(520, 30, 281, 20))
+        self.titleLineEdit.setObjectName("titleLineEdit")
+        self.label_5 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_5.setGeometry(QtCore.QRect(460, 80, 51, 16))
+        self.label_5.setObjectName("label_5")
+        self.contentTextEdit = QtWidgets.QTextEdit(self.groupBox_2)
+        self.contentTextEdit.setGeometry(QtCore.QRect(520, 80, 281, 71))
+        self.contentTextEdit.setObjectName("contentTextEdit")
+        self.urlLineEdit = QtWidgets.QLineEdit(self.groupBox_2)
+        self.urlLineEdit.setGeometry(QtCore.QRect(520, 180, 281, 20))
+        self.urlLineEdit.setObjectName("urlLineEdit")
+        self.label_12 = QtWidgets.QLabel(self.groupBox_2)
+        self.label_12.setGeometry(QtCore.QRect(460, 180, 51, 16))
+        self.label_12.setObjectName("label_12")
+        self.addButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.addButton.setGeometry(QtCore.QRect(810, 110, 75, 23))
+        self.addButton.setObjectName("addButton")
+        self.editButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.editButton.setGeometry(QtCore.QRect(460, 530, 75, 23))
+        self.editButton.setObjectName("editButton")
+        self.loadButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.loadButton.setGeometry(QtCore.QRect(460, 450, 75, 23))
+        self.loadButton.setObjectName("loadButton")
+        self.postWidget = QtWidgets.QTableWidget(self.groupBox_2)
+        self.postWidget.setGeometry(QtCore.QRect(10, 20, 441, 541))
+        self.postWidget.setObjectName("postWidget")
+        self.postWidget.setColumnCount(5)
+        self.postWidget.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.postWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.postWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.postWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.postWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.postWidget.setHorizontalHeaderItem(4, item)
+        self.imageListWidget = QtWidgets.QListWidget(self.groupBox_2)
+        self.imageListWidget.setGeometry(QtCore.QRect(520, 210, 281, 192))
+        self.imageListWidget.setObjectName("imageListWidget")
+        self.addImageButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.addImageButton.setGeometry(QtCore.QRect(590, 410, 75, 23))
+        self.addImageButton.setObjectName("addImageButton")
+        self.deleteButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.deleteButton.setGeometry(QtCore.QRect(460, 490, 75, 23))
+        self.deleteButton.setObjectName("deleteButton")
+        self.uploadButton = QtWidgets.QPushButton(self.groupBox_2)
+        self.uploadButton.setGeometry(QtCore.QRect(680, 410, 75, 23))
+        self.uploadButton.setObjectName("uploadButton")
         self.stackedWidget.addWidget(self.dashboard_page)
         self.profile_page = QtWidgets.QWidget()
         self.profile_page.setObjectName("profile_page")
-        self.label_5 = QtWidgets.QLabel(self.profile_page)
-        self.label_5.setGeometry(QtCore.QRect(350, 220, 231, 81))
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
+        self.groupBox = QtWidgets.QGroupBox(self.profile_page)
+        self.groupBox.setGeometry(QtCore.QRect(0, 0, 891, 561))
+        self.groupBox.setObjectName("groupBox")
+        self.avatarLabel = QtWidgets.QLabel(self.groupBox)
+        self.avatarLabel.setGeometry(QtCore.QRect(20, 20, 131, 131))
+        self.avatarLabel.setText("")
+        self.avatarLabel.setPixmap(QtGui.QPixmap(":/newPrefix/icon/profile.png"))
+        self.avatarLabel.setObjectName("avatarLabel")
+        self.phoneLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.phoneLineEdit.setGeometry(QtCore.QRect(10, 210, 141, 20))
+        self.phoneLineEdit.setText("")
+        self.phoneLineEdit.setPlaceholderText("")
+        self.phoneLineEdit.setObjectName("phoneLineEdit")
+        self.addressLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.addressLineEdit.setGeometry(QtCore.QRect(10, 270, 141, 20))
+        self.addressLineEdit.setText("")
+        self.addressLineEdit.setPlaceholderText("")
+        self.addressLineEdit.setObjectName("addressLineEdit")
+        self.emailLineEdit = QtWidgets.QLineEdit(self.groupBox)
+        self.emailLineEdit.setGeometry(QtCore.QRect(180, 210, 141, 20))
+        self.emailLineEdit.setText("")
+        self.emailLineEdit.setPlaceholderText("")
+        self.emailLineEdit.setObjectName("emailLineEdit")
+        self.editProfileButton = QtWidgets.QPushButton(self.groupBox)
+        self.editProfileButton.setGeometry(QtCore.QRect(10, 330, 81, 29))
+        self.editProfileButton.setStyleSheet("QPushButton {\n"
+"    border: 2px solid #8f8f91;\n"
+"    border-radius: 7px; /* Nửa chiều rộng hoặc chiều cao của nút */\n"
+"    background-color: #dcdcdc;\n"
+"    min-width: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    min-height: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    padding: 5px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c6c6c6;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: #a9a9a9;\n"
+"}")
+        self.editProfileButton.setObjectName("editProfileButton")
+        self.saveButton = QtWidgets.QPushButton(self.groupBox)
+        self.saveButton.setGeometry(QtCore.QRect(130, 330, 75, 29))
+        self.saveButton.setStyleSheet("QPushButton {\n"
+"    border: 2px solid #8f8f91;\n"
+"    border-radius: 7px; /* Nửa chiều rộng hoặc chiều cao của nút */\n"
+"    background-color: #dcdcdc;\n"
+"    min-width: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    min-height: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    padding: 5px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c6c6c6;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: #a9a9a9;\n"
+"}")
+        self.saveButton.setObjectName("saveButton")
+        self.addAvatarButton = QtWidgets.QPushButton(self.groupBox)
+        self.addAvatarButton.setGeometry(QtCore.QRect(30, 160, 101, 29))
+        self.addAvatarButton.setStyleSheet("QPushButton {\n"
+"    border: 2px solid #8f8f91;\n"
+"    border-radius: 7px; /* Nửa chiều rộng hoặc chiều cao của nút */\n"
+"    background-color: #dcdcdc;\n"
+"    min-width: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    min-height: 15px; /* Đảm bảo nút là hình vuông */\n"
+"    padding: 5px; /* Thêm khoảng cách bên trong để dễ nhấn hơn */\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #c6c6c6;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: #a9a9a9;\n"
+"}")
+        self.addAvatarButton.setObjectName("addAvatarButton")
+        self.label_9 = QtWidgets.QLabel(self.groupBox)
+        self.label_9.setGeometry(QtCore.QRect(20, 230, 71, 16))
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(self.groupBox)
+        self.label_10.setGeometry(QtCore.QRect(190, 230, 47, 13))
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(self.groupBox)
+        self.label_11.setGeometry(QtCore.QRect(20, 290, 47, 13))
+        self.label_11.setObjectName("label_11")
         self.stackedWidget.addWidget(self.profile_page)
         self.messages_page = QtWidgets.QWidget()
         self.messages_page.setObjectName("messages_page")
@@ -281,17 +409,43 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.messages_page)
         self.notifications_page = QtWidgets.QWidget()
         self.notifications_page.setObjectName("notifications_page")
-        self.label_7 = QtWidgets.QLabel(self.notifications_page)
-        self.label_7.setGeometry(QtCore.QRect(290, 230, 231, 81))
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        self.label_7.setFont(font)
-        self.label_7.setObjectName("label_7")
+        self.groupBox_3 = QtWidgets.QGroupBox(self.notifications_page)
+        self.groupBox_3.setGeometry(QtCore.QRect(0, 0, 891, 571))
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.tableWidget_2 = QtWidgets.QTableWidget(self.groupBox_3)
+        self.tableWidget_2.setGeometry(QtCore.QRect(0, 20, 541, 541))
+        self.tableWidget_2.setObjectName("tableWidget_2")
+        self.tableWidget_2.setColumnCount(6)
+        self.tableWidget_2.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(5, item)
+        self.platformsWidget = QtWidgets.QWidget(self.groupBox_3)
+        self.platformsWidget.setGeometry(QtCore.QRect(550, 20, 331, 131))
+        self.platformsWidget.setObjectName("platformsWidget")
+        self.saveButton_2 = QtWidgets.QPushButton(self.groupBox_3)
+        self.saveButton_2.setGeometry(QtCore.QRect(550, 220, 75, 23))
+        self.saveButton_2.setObjectName("saveButton_2")
+        self.postButton = QtWidgets.QPushButton(self.groupBox_3)
+        self.postButton.setGeometry(QtCore.QRect(550, 260, 75, 23))
+        self.postButton.setObjectName("postButton")
+        self.loadDataButton = QtWidgets.QPushButton(self.groupBox_3)
+        self.loadDataButton.setGeometry(QtCore.QRect(550, 180, 75, 23))
+        self.loadDataButton.setObjectName("loadDataButton")
         self.stackedWidget.addWidget(self.notifications_page)
         self.settings_page = QtWidgets.QWidget()
         self.settings_page.setObjectName("settings_page")
         self.label_8 = QtWidgets.QLabel(self.settings_page)
-        self.label_8.setGeometry(QtCore.QRect(380, 280, 231, 81))
+        self.label_8.setGeometry(QtCore.QRect(190, 60, 481, 331))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_8.setFont(font)
@@ -299,12 +453,13 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.settings_page)
         self.verticalLayout_5.addWidget(self.stackedWidget)
         self.gridLayout.addWidget(self.main_menu, 0, 2, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        BaseWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(BaseWindow)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        BaseWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(BaseWindow)
+        self.stackedWidget.setCurrentIndex(3)
         self.menu.toggled['bool'].connect(self.icon_only_widget.setHidden) # type: ignore
         self.menu.toggled['bool'].connect(self.icon_name_widget.setVisible) # type: ignore
         self.settings_1.toggled['bool'].connect(self.settings_2.setChecked) # type: ignore
@@ -317,33 +472,61 @@ class Ui_MainWindow(object):
         self.messages_2.toggled['bool'].connect(self.messages_1.setChecked) # type: ignore
         self.notifications_2.toggled['bool'].connect(self.notifications_1.setChecked) # type: ignore
         self.settings_2.toggled['bool'].connect(self.settings_1.setChecked) # type: ignore
-        self.pushButton_6.toggled['bool'].connect(MainWindow.close) # type: ignore
-        self.pushButton_11.toggled['bool'].connect(MainWindow.close) # type: ignore
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.pushButton_6.toggled['bool'].connect(BaseWindow.close) # type: ignore
+        self.pushButton_11.toggled['bool'].connect(BaseWindow.close) # type: ignore
+        QtCore.QMetaObject.connectSlotsByName(BaseWindow)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, BaseWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_3.setText(_translate("MainWindow", "Sidebar"))
-        self.dashboard_2.setText(_translate("MainWindow", "Dashboard"))
-        self.profile_2.setText(_translate("MainWindow", "Profile"))
-        self.messages_2.setText(_translate("MainWindow", "Messages"))
-        self.notifications_2.setText(_translate("MainWindow", "Notifications"))
-        self.settings_2.setText(_translate("MainWindow", "Settings"))
-        self.pushButton_11.setText(_translate("MainWindow", "Sign Out"))
-        self.label_4.setText(_translate("MainWindow", "Dashboard page"))
-        self.label_5.setText(_translate("MainWindow", "Profile  page"))
-        self.label_6.setText(_translate("MainWindow", "Messagers  page"))
-        self.label_7.setText(_translate("MainWindow", "Notifications  page"))
-        self.label_8.setText(_translate("MainWindow", "Settings page"))
+        BaseWindow.setWindowTitle(_translate("BaseWindow", "MainWindow"))
+        self.label_3.setText(_translate("BaseWindow", "Sidebar"))
+        self.dashboard_2.setText(_translate("BaseWindow", "Quản lý bài viết"))
+        self.profile_2.setText(_translate("BaseWindow", "Profile"))
+        self.messages_2.setText(_translate("BaseWindow", "Messages"))
+        self.notifications_2.setText(_translate("BaseWindow", "Quản lý bài đăng"))
+        self.settings_2.setText(_translate("BaseWindow", "Settings"))
+        self.pushButton_11.setText(_translate("BaseWindow", "Sign Out"))
+        self.groupBox_2.setTitle(_translate("BaseWindow", "Quản lý bài viết"))
+        self.label_4.setText(_translate("BaseWindow", "Tiêu đề :"))
+        self.label_5.setText(_translate("BaseWindow", "Nội dung :"))
+        self.label_12.setText(_translate("BaseWindow", "URL ảnh :"))
+        self.addButton.setText(_translate("BaseWindow", "Add"))
+        self.editButton.setText(_translate("BaseWindow", "Edit"))
+        self.loadButton.setText(_translate("BaseWindow", "Load data"))
+        item = self.postWidget.horizontalHeaderItem(1)
+        item.setText(_translate("BaseWindow", "ID"))
+        item = self.postWidget.horizontalHeaderItem(2)
+        item.setText(_translate("BaseWindow", "Tiêu đề"))
+        item = self.postWidget.horizontalHeaderItem(3)
+        item.setText(_translate("BaseWindow", "Nội dung"))
+        item = self.postWidget.horizontalHeaderItem(4)
+        item.setText(_translate("BaseWindow", "Url ảnh"))
+        self.addImageButton.setText(_translate("BaseWindow", "Add ảnh"))
+        self.deleteButton.setText(_translate("BaseWindow", "Delete"))
+        self.uploadButton.setText(_translate("BaseWindow", "Up ảnh"))
+        self.groupBox.setTitle(_translate("BaseWindow", "Profile"))
+        self.editProfileButton.setText(_translate("BaseWindow", "Edit profile"))
+        self.saveButton.setText(_translate("BaseWindow", "Save"))
+        self.addAvatarButton.setText(_translate("BaseWindow", "Add avata"))
+        self.label_9.setText(_translate("BaseWindow", "Phone number"))
+        self.label_10.setText(_translate("BaseWindow", "Email"))
+        self.label_11.setText(_translate("BaseWindow", "Adrres"))
+        self.label_6.setText(_translate("BaseWindow", "Messagers  page"))
+        self.groupBox_3.setTitle(_translate("BaseWindow", "GroupBox"))
+        item = self.tableWidget_2.horizontalHeaderItem(0)
+        item.setText(_translate("BaseWindow", "ID"))
+        item = self.tableWidget_2.horizontalHeaderItem(1)
+        item.setText(_translate("BaseWindow", "Tiêu đề"))
+        item = self.tableWidget_2.horizontalHeaderItem(2)
+        item.setText(_translate("BaseWindow", "Nội dung"))
+        item = self.tableWidget_2.horizontalHeaderItem(3)
+        item.setText(_translate("BaseWindow", "URL ảnh"))
+        item = self.tableWidget_2.horizontalHeaderItem(4)
+        item.setText(_translate("BaseWindow", "Nền tảng đăng bài"))
+        item = self.tableWidget_2.horizontalHeaderItem(5)
+        item.setText(_translate("BaseWindow", "Trạng thái"))
+        self.saveButton_2.setText(_translate("BaseWindow", "Save"))
+        self.postButton.setText(_translate("BaseWindow", "Đăng Bài"))
+        self.loadDataButton.setText(_translate("BaseWindow", "Load data"))
+        self.label_8.setText(_translate("BaseWindow", "Settings page"))
 import resources_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
